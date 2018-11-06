@@ -1,0 +1,19 @@
+
+  .register{
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    margin-top: 1%;
+    padding: 3%;
+}
+
+
+.register-right{
+    background: #f8f9fa;
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+}
+
+
+.register .register-form{
+    padding: 6%;
+    margin-top: 10%;
+}

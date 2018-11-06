@@ -1,0 +1,45 @@
+<div class="container register">
+    <div class="row">
+  
+      <div class="col-md-12 register-right">
+  
+        <div class="row register-form">
+          <div class="col-md-12">
+            <form class="form-horizontal" #f="ngForm" novalidate (ngSubmit)="f.form.valid && onSubmit()">
+           <input type="hidden" class="form-control"  required name="id" [(ngModel)]="emp.id"value="" />
+
+              <div class="form-group" >
+
+                <input type="text" class="form-control" #firstNamevalid="ngModel" required name="firstName" [(ngModel)]="emp.firstName"
+                  placeholder="First Name *" value="" />
+  
+                <div *ngIf="firstNamevalid.errors && (firstNamevalid.dirty || firstNamevalid.touched)">
+                  <p  class="text-danger" *ngIf="firstNamevalid.errors.required">First Name is required</p>
+                </div>
+              </div>
+  
+              <div class="form-group">
+                <input type="text" class="form-control"  name="lastName" [(ngModel)]="emp.lastName" placeholder="Last Name"
+                  value="" />
+              </div>
+              <div class="form-group">
+                <select class="form-control" name="languages" [(ngModel)]="emp.languages" multiple>
+                  <option class="hidden" selected disabled>Please Languages You Know?</option>
+                  <option value="Hindi">Hindi</option>
+                  <option value="English">English</option>
+                  <option value="Marathi">Marathi</option>
+                </select>
+              </div>
+              <input type="submit" class="btn btn-success" value="Update" />
+            </form>
+          </div>
+  
+        </div>
+  
+  
+  
+      </div>
+  
+    </div>
+  
+  </div>
